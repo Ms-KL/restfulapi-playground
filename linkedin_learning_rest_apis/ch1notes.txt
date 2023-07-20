@@ -1,0 +1,121 @@
+***********************************************
+Chapter: 1. REST API: Representational State Transfer Application Programming Interface
+***********************************************
+
+
+-----------------------------------------------
+Video: What is a REST API?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:24            Each page (made up of CSS, HTML, JS) made up of a view representing the current state
+
+Visitor enters site for first time --> all elements downloaded (HTML framework, CSS, JS)
+--> App sends URI for web resource representing NEXT STATE --> uses received data to build view --> visitor goes between one view to another (CRUD) --> URI sends request for web resource to represent next state --> xferred as data object, not entire set of files --> app updates data w/out rendering whole page --> single page vs many 
+
+
+-----------------------------------------------
+Video: Sidebar: URL vs. URI
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:03            REST = librarian 
+API = language used to talk to them 
+
+0:00:54            URI = mailto:kristy@email.com, urn:library:names:authors:mrh, https://restful.dev/posts/5 --> URL = SUBSET (how to access the URI) eg: https:// or ftp:// 
+
+0:02:15            URN can be URL but doesn't have to be • URI: HTTP://website.com/author/name.html#posts --> URL: HTTP://website.com/author/name.html • URN: website.com/author/name.html#posts • RESOURCE: #posts • Location (where resource resides): .html 
+
+0:02:15            URN: unique id (eg: name - Kristy Leigh Gray, resource name - linkedin.com/users/kristyleighgray)
+URL: location (eg: Earth, Australia, WA, etc) 
+
+
+-----------------------------------------------
+Video: The six constraints of REST
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:15            6 constraints: 1) client server architecture, 2) statelessness 3) cacheability 4) layered system 5) code on demand 6) uniform interface 
+
+0:00:27            1. Client-server architecture: client manages User Interface --> server manages data storage 
+
+0:00:49            One REST service can manage many client interfaces --> complete separation between content and presentation 
+
+0:01:34            2. Statelessness --> no client context or info (STATE) can be stored on the server between 2 requests --> EG: client requests from rest server "I'm at state 1, give me state 2". --> state is self-contained in client --> REST server doesn't care what state to give, client must provide context and ask for state 
+
+0:01:36            3. cacheability - all rest responses must be marked as cacheable or not cacheable 
+
+0:01:59            REST server to client: keep for 2 days and then forget the data. 
+
+0:02:08            4. layered system: client can't know and shouldn't care if its connected to server or intermediary (eg CDN or mirror) 
+
+0:02:17            Scaleable and secure: Client to CDN to REST Server or direct to REST server 
+
+0:02:26            5. code on demand: server can xfer exe code: eg: JS and compiled components to clients 
+
+0:02:43            6. uniform interface: 6.1 Resource id in request, 6.2 resource manipulation through representation, 6.3 Self-descriptive messages, 6.4 hypermedia as engine of app state 
+
+0:03:29            6.1: resource id in requests --> URI used to send request --> specifies what resource it wants --> what format response should be = authors/kristy/bio (resource) --> stored as a table in MySQL --> this is returned as JSON or XML etc 
+
+0:03:47            6.2: resource manipulation through representation: once client has rep of resource, it can CRUD --> client can control what is stored on server (depending on access) 
+
+0:04:06            6.3 self descriptive messages = each rep must describe own data format --> eg: client "give me post #4 in JSON format" -- server responds in JSON 
+
+0:04:19            6.4 - Hypermedia as engine of app (State) --> once client has access to REST resource, it should be able to discover ALL AVAILABLE RESOURCES and methods through hyperlinks provided 
+
+0:04:32            Request page resource and along w/ contents, it will return hyperlinks to all resources and methods 
+
+0:04:39            REST server describes use with all returned resources (eg: JSON gives data, Methods put patch etc, next post #, previous #, category etc) 
+
+0:04:46            If all constraints are met, it is considered a restful API 
+
+
+-----------------------------------------------
+Video: How REST relates to HTTP
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:20            RESTful API available through the web using HTTP protocol 
+
+0:01:08            HTTP: protocol browser uses to access hypertext docs on the web (www)
+WWW: lives on the internet (like smtp for email, message etc)
+Rest and HTTP not linked -> just a convenient pairing 
+
+0:01:25            Send request through HTTP to REST that meets 6 constraints = RESTful 
+
+
+-----------------------------------------------
+Video: Who or what interacts with REST APIs?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:33            Client = website or app (consumes REST API -> requests and receives responses) 
+
+
+-----------------------------------------------
+Video: Tools to see REST API in action
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:26            Chapter 1 Quiz:
+
+* Question 1 of 6:
+A RESTful API is a service that runs on the web over HTTP to facilitate access to web resources. `TRUE`
+
+* Question 2 of 6:
+Who can interact with a REST API? `Anyone, unless the REST API includes an authentication layer or similar access restrictions.`
+
+* Question 3 of 6:
+What is the relationship between URIs, URLs, and URNs?
+`A URN can be a URL, and both are always URIs.`
+
+* Question 4 of 6:
+REST is a stateless protocol. What does this mean?
+`No client context or information (aka “state”) can be stored on the server between requests.`
+
+* Question 5 of 6:
+A representation of a resource is a unique copy of that resource, not the resource itself.
+`TRUE`
+
+* Question 6 of 6:
+What is a REST API? `an application programming interface that follows the six constraints of REST` 

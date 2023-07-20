@@ -1,0 +1,73 @@
+# GET https://reqres.in/api/users
+# GET https://reqres.in/api/users/2
+# OPTIONS https://reqres.in/api/users
+# # HEAD https://reqres.in/api/login
+# HEAD https://reqres.in/api/users/
+# OPTIONS https://icy-dew-540.fly.dev/projects/
+# HEAD https://icy-dew-540.fly.dev/projects/
+# OPTIONS https://icy-dew-540.fly.dev/pledges/
+# GET https://icy-dew-540.fly.dev/users/10/
+# GET https://icy-dew-540.fly.dev/projects/
+# OPTIONS https://icy-dew-540.fly.dev/projects/
+
+
+
+# ------------------------
+
+# POST  https://icy-dew-540.fly.dev/projects/ 
+# Authorization: Token <insert>
+# Content-Type: application/json
+
+# {
+#     "title": "second example project sending POST via vscode",
+#     "description": "this project was sent via POST Request extension in VS Code.",
+#     "goal": 1000,
+#     "image": "https://images.pexels.com/photos/16575028/pexels-photo-16575028/free-photo-of-cats-in-window.jpeg",
+#     "is_open": true,
+#     "deadline": null
+# }
+
+# Result: https://icy-dew-540.fly.dev/projects/20/
+# Front end: https://prismatic-phoenix-20010b.netlify.app/projects/20/
+
+# -----------------------
+
+# GET  https://icy-dew-540.fly.dev/projects/20/ 
+# Content-Type: application/json
+
+# -----------------------
+
+# OPTIONS https://icy-dew-540.fly.dev/projects/20/ 
+
+# -----------------------
+
+# PATCH  https://icy-dew-540.fly.dev/projects/20/ 
+# Authorization: Token <insert>
+# Content-Type: application/json
+
+# {
+#     "title": "NEW title of second example project sending PATCH via vscode",
+#     "description": "this PATCH update was sent via Send Request extension in VS Code."
+# }
+
+# -----------------------
+
+# PUT  https://icy-dew-540.fly.dev/projects/20/ 
+# Authorization: Token <insert>
+# Content-Type: application/json
+
+# {
+#     "title": "second example project sending PUT via vscode",
+#     "description": "this project was sent via PUT Request extension in VS Code.",
+#     "goal": 1000,
+#     "image": "https://images.pexels.com/photos/16575028/pexels-photo-16575028/free-photo-of-cats-in-window.jpeg",
+#     "is_open": true
+# }
+
+    # "deadline": null (not required for PUT)
+
+# ------------------------
+
+# DELETE https://icy-dew-540.fly.dev/projects/20/ 
+# Authorization: Token <insert>
+# Content-Type: application/json
